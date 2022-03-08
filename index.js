@@ -7,7 +7,9 @@ app.use(bodyParser.json())
 
 app.get('/api/hello', async (req, res) => {
 
-    res.send('Hello World')
+    //res.send('Hello World')
+    const env = JSON.stringify(process.env.mysecret)
+    res.send(env)
 })
 
 app.get('/api/merhaba', (req, res) => {
